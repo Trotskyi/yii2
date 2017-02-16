@@ -58,6 +58,11 @@ $config = [
             'enableAutoLogin' => true,
         ],
     ],
+    'modules' => [
+        'admin' => [
+            'class' => 'app\modules\admin\Module',
+        ],
+    ],
     'params' => require('/var/www/html/config/params.php'),
 ];
 
