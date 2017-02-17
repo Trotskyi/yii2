@@ -11,6 +11,7 @@ services:
             ENABLE_ENV_FILE: 1
             ENABLE_LOCALCONF: 1
             API_TOKEN: "<YOUR GITHUB API TOKEN>"
+            XDEBUG_CONFIG: remote_host={{127.0.0.1}}
 
 
         # For Apache based image:
