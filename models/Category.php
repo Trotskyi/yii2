@@ -2,6 +2,7 @@
 
 namespace app\models;
 
+use app\modules\admin\controllers\ArticleController;
 use Yii;
 
 /**
@@ -39,5 +40,10 @@ class Category extends \yii\db\ActiveRecord
             'id' => 'ID',
             'title' => 'Title',
         ];
+    }
+
+    public function getArticles()
+    {
+        return $this->hasMany(Article::className(), ['category_id' => 'id']);
     }
 }

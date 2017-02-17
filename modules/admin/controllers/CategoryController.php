@@ -1,5 +1,7 @@
 <?php
 
+
+
 namespace app\modules\admin\controllers;
 
 use Yii;
@@ -28,7 +30,6 @@ class CategoryController extends Controller
             ],
         ];
     }
-
     /**
      * Lists all Category models.
      * @return mixed
@@ -37,13 +38,11 @@ class CategoryController extends Controller
     {
         $searchModel = new CategorySearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
-
         return $this->render('index', [
             'searchModel' => $searchModel,
             'dataProvider' => $dataProvider,
         ]);
     }
-
     /**
      * Displays a single Category model.
      * @param integer $id
@@ -55,7 +54,6 @@ class CategoryController extends Controller
             'model' => $this->findModel($id),
         ]);
     }
-
     /**
      * Creates a new Category model.
      * If creation is successful, the browser will be redirected to the 'view' page.
@@ -64,7 +62,6 @@ class CategoryController extends Controller
     public function actionCreate()
     {
         $model = new Category();
-
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->id]);
         } else {
@@ -73,7 +70,6 @@ class CategoryController extends Controller
             ]);
         }
     }
-
     /**
      * Updates an existing Category model.
      * If update is successful, the browser will be redirected to the 'view' page.
@@ -83,7 +79,6 @@ class CategoryController extends Controller
     public function actionUpdate($id)
     {
         $model = $this->findModel($id);
-
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->id]);
         } else {
@@ -92,7 +87,6 @@ class CategoryController extends Controller
             ]);
         }
     }
-
     /**
      * Deletes an existing Category model.
      * If deletion is successful, the browser will be redirected to the 'index' page.
@@ -102,10 +96,8 @@ class CategoryController extends Controller
     public function actionDelete($id)
     {
         $this->findModel($id)->delete();
-
         return $this->redirect(['index']);
     }
-
     /**
      * Finds the Category model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.
