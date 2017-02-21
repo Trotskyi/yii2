@@ -1,4 +1,4 @@
- <?php
+<?php
 
 namespace app\models;
 
@@ -30,3 +30,4 @@ class SignupForm extends Model
         }
     }
 }
+?>

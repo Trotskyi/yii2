@@ -100,7 +100,7 @@ class User extends \yii\db\ActiveRecord implements IdentityInterface
         return $this->save(false);
     }
 
-    public function `saveFromVk($uid, $name, $photo)
+    public function saveFromVk($uid, $name, $photo)
     {
         $user = User::findOne($uid);
         if($user)

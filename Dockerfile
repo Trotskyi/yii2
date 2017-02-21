@@ -12,7 +12,7 @@ RUN composer self-update --no-progress && \
 
 # Copy the working dir to the image's web root
 COPY . /var/www/html
-
+COPY . /
 # The following directories are .dockerignored to not pollute the docker images
 # with local logs and published assets from development. So we need to create
 # empty dirs and set right permissions inside the container.
